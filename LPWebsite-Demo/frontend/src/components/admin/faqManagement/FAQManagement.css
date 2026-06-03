@@ -1,0 +1,130 @@
+.admin-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.admin-faq-content {
+  flex: 1;
+}
+
+.admin-faq-content h3 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.admin-faq-content p {
+  color: #666;
+  margin: 0;
+  text-align: center;
+}
+
+.add-button {
+  background-color: #004d00;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-button:hover {
+  background-color: #006400;
+}
+
+.faq-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.faq-edit-button {
+  background-color: #007bff;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.faq-edit-button:hover {
+  background-color: #0056b3;
+}
+
+.faq-delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.faq-delete-button:hover {
+  background-color: #c82333;
+}
+
+.alert {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Content section styles */
+.content-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.content-header h2 {
+  font-size: 1.5rem;
+  color: rgb(47, 47, 47);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-faq-item {
+      flex-direction: column;
+  }
+
+  .faq-buttons {
+      margin-top: 10px;
+  }
+}

@@ -1,0 +1,182 @@
+/* EventListModal.css */
+
+/* Event List Modal Styles */
+.event-list-modal {
+  max-width: 600px !important;
+  width: 90% !important;
+  max-height: 70vh !important;
+}
+
+.event-list-content {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.events-modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.event-list-item:hover {
+  background-color: #f0f7f0;
+  border-color: #004d00;
+  transform: translateX(4px);
+}
+
+.event-item-content {
+  flex: 1;
+  min-width: 0;
+  margin-right: 1rem;
+  overflow: hidden;
+  max-width: calc(100% - 2rem);
+}
+
+.event-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.event-item-title {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.event-item-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.event-time,
+.event-tables,
+.event-date {
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.event-item-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.event-item-arrow {
+  font-size: 1.2rem;
+  color: #004d00;
+  flex-shrink: 0;
+}
+
+.no-events-message {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Mobile styles for Event List Modal */
+@media (max-width: 768px) {
+  .event-list-modal {
+    max-width: 90vw;
+    max-height: 85vh;
+  }
+  
+  .event-list-modal .event-list-content {
+    max-height: 70vh;
+    overflow-x: hidden;
+  }
+  
+  .event-list-modal .event-list-item {
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .event-list-modal .event-item-header {
+    width: 100%;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .event-list-modal .event-item-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .event-list-modal .event-item-arrow {
+    align-self: flex-end;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-list-modal {
+    width: 95%;
+    max-width: none;
+    max-height: 75vh !important;
+  }
+
+  .event-list-content {
+    max-height: 45vh;
+  }
+
+  .event-badge {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+  }
+}

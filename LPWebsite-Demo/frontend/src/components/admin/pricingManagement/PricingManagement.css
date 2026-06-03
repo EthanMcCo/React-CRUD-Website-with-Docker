@@ -1,0 +1,522 @@
+/* PricingManagement.css - Following component-prefixed naming convention */
+
+/* Tab Navigation - Inherit from shared styles */
+.tab-navigation {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-button:hover {
+  color: #004d00;
+  background-color: #f8f9fa;
+}
+
+.tab-button.active {
+  color: #004d00;
+  border-bottom-color: #004d00;
+  font-weight: 600;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+/* Alert Styles */
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Header Styles */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Pricing Management Specific Styles */
+.pricing-mgmt__section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.pricing-mgmt__section h3 {
+  color: #004d00;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #004d00;
+}
+
+.pricing-mgmt__section h4 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.pricing-mgmt__section h4:first-of-type {
+  margin-top: 0;
+}
+
+.pricing-mgmt__section h5 {
+  color: #004d00;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.pricing-mgmt__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-mgmt__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pricing-mgmt__label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.pricing-mgmt__input {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.pricing-mgmt__input:focus {
+  outline: none;
+  border-color: #004d00;
+  box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+}
+
+.pricing-mgmt__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+.pricing-mgmt__checkbox-label input[type="checkbox"] {
+  margin: 0;
+  scale: 1.2;
+}
+
+/* Button Styles */
+.pricing-mgmt__btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.pricing-mgmt__btn--primary {
+  background-color: #004d00;
+  color: white;
+  height: 60%;
+  margin: 30px;
+}
+
+.pricing-mgmt__btn--primary:hover {
+  background-color: #006400;
+  transform: translateY(-1px);
+}
+
+.pricing-mgmt__btn--primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pricing-mgmt__btn--secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.pricing-mgmt__btn--secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+}
+
+.pricing-mgmt__btn--success {
+  background-color: #28a745;
+  color: white;
+}
+
+.pricing-mgmt__btn--success:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.pricing-mgmt__btn--danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.pricing-mgmt__btn--danger:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.pricing-mgmt__save-btn {
+  background-color: #004d00;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 77, 0, 0.1);
+}
+
+.pricing-mgmt__save-btn:hover {
+  background-color: #006400;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 77, 0, 0.2);
+}
+
+/* Card Styles */
+.pricing-mgmt__add-form {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.pricing-mgmt__table-types-list {
+  margin-top: 2rem;
+}
+
+.pricing-mgmt__table-type-card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-mgmt__table-type-info h5 {
+  margin: 0 0 0.5rem 0;
+  color: #004d00;
+  font-size: 1.1rem;
+}
+
+.pricing-mgmt__table-type-info p {
+  margin: 0 0 0.5rem 0;
+  color: #666;
+  font-style: italic;
+}
+
+.pricing-mgmt__table-type-info small {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.pricing-mgmt__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Pricing Card Styles */
+.pricing-mgmt__pricing-card {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-mgmt__pricing-card h4 {
+  margin: 0 0 1rem 0;
+  color: #004d00;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.pricing-mgmt__pricing-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.pricing-mgmt__pricing-type {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.pricing-mgmt__pricing-type h5 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Price Input Styles */
+.pricing-mgmt__price-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pricing-mgmt__currency {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #004d00;
+}
+
+.pricing-mgmt__price-input {
+  width: 120px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.pricing-mgmt__price-input:focus {
+  outline: none;
+  border-color: #004d00;
+  box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+}
+
+.pricing-mgmt__price-unit {
+  color: #666;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Legacy styles for backward compatibility */
+.pricing-management {
+  padding: 20px;
+}
+
+.management-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.management-section h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.price-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #444;
+  min-width: 200px;
+}
+
+.price-input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.currency {
+  color: #666;
+  font-weight: 500;
+}
+
+.price-input-group input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.price-label {
+  color: #666;
+  white-space: nowrap;
+}
+
+.message {
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.management-loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pricing-mgmt__section {
+    padding: 1rem;
+  }
+  
+  .pricing-mgmt__form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .pricing-mgmt__pricing-types {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .pricing-mgmt__actions {
+    justify-content: center;
+  }
+  
+  .content-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .tab-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .pricing-mgmt__price-input-group {
+    justify-content: center;
+  }
+
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .price-input-group {
+    width: 100%;
+  }
+
+  .price-input-group input {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-mgmt__section {
+    padding: 0.75rem;
+  }
+  
+  .pricing-mgmt__add-form {
+    padding: 1rem;
+  }
+  
+  .pricing-mgmt__table-type-card,
+  .pricing-mgmt__pricing-card {
+    padding: 1rem;
+  }
+  
+  .tab-button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}

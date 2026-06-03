@@ -1,0 +1,1143 @@
+.league-registration {
+  min-height: 100vh;
+  background-color: #F7EEDF;
+  padding: 2rem 1rem;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.league-registration-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.league-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-bottom: 2px solid #004d00;
+}
+
+.league-header h1 {
+  font-size: 2.5rem;
+  color: #004d00;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.league-header p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Night Filter Section */
+.night-filter-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1.5px solid #004d00;
+
+}
+
+.night-filter-section label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Captain Login Section */
+.captain-login-section {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid #004d00;
+}
+
+/* Captain header with info icon */
+.captain-header-with-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.captain-header-with-info .info-icon-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 0;
+}
+
+.captain-header-with-info h3 {
+  margin: 0;
+  color: #004d00;
+  font-size: 1.2rem;
+}
+
+.captain-login-section h3 {
+  color: #004d00;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+
+.login-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.login-input {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #004d00;
+  box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+}
+
+.league-login-button {
+  background-color: #004d00;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  color: white;
+}
+
+.login-button:hover,
+.league-login-button:hover {
+  background-color: #006400;
+}
+
+/* Forgot password functionality */
+.login-footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #004d00;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.forgot-password-link:hover {
+  color: #006400;
+}
+
+.forgot-password-form {
+  width: 100%;
+}
+
+.forgot-password-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.forgot-password-text {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+}
+
+
+
+.reset-email-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.reset-email-input:focus {
+  outline: none;
+  border-color: #004d00;
+  box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+}
+
+.reset-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.send-reset-button,
+.back-to-login-button {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.send-reset-button {
+  background-color: #004d00;
+  color: white;
+}
+
+.send-reset-button:hover {
+  background-color: #006400;
+}
+
+.back-to-login-button {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.back-to-login-button:hover {
+  background-color: #e9ecef;
+}
+
+.captain-message {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.captain-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.captain-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Night Select Base Styles */
+
+.night-select, .league-select {
+  padding: 0.75rem;
+  border: 1px solid #004d00;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-family: inherit;
+  font-size: 0.95rem;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.league-select {
+  font-size: 0.9rem;
+  min-height: 2.5rem;
+  width: 100%;
+}
+
+.no-leagues-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.night-select:focus, .league-select:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+}
+
+.registration-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Container - Team Lists */
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.registration-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px; /* Fixed height */
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-box h2 {
+  color: #004d00;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #004d00;
+}
+
+/* Section header with info bubble */
+.section-header-with-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #004d00;
+}
+
+.section-header-with-info h2 {
+  color: #004d00;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0;
+  border: none !important;
+  border-bottom: none !important;
+  line-height: 1.2;
+}
+
+/* Info icon styling for section headers */
+.section-header-with-info .info-icon-container {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  margin-top: 2px;
+}
+
+.section-header-with-info .info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #004d00;
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  cursor: help;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.team-section-tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333 !important;
+  color: white !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 6px !important;
+  font-size: 0.85rem !important;
+  width: 280px !important;
+  white-space: normal !important;
+  text-align: center !important;
+  z-index: 1001 !important;
+  opacity: 0;
+  transition: opacity 0.3s ease !important;
+  margin-bottom: 8px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+  line-height: 1.4 !important;
+  font-family: inherit !important;
+  font-weight: normal !important;
+  text-decoration: none !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  min-height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+.info-icon-container:hover .team-section-tooltip {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.team-section-tooltip::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border-width: 6px !important;
+  border-style: solid !important;
+  border-color: #333 transparent transparent transparent !important;
+}
+
+/* Override any conflicting styles from the original registration-box h2 */
+.registration-box .section-header-with-info h2 {
+  border-bottom: none !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Make sure the container has only one border */
+.registration-box .section-header-with-info {
+  border-bottom: 2px solid #004d00;
+}
+
+/* Remove any default h2 styling that might conflict */
+.section-header-with-info + .teams-list-container {
+  margin-top: 0;
+}
+
+.teams-list-container {
+  flex: 1; /* Take remaining space after header */
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  /* Remove max-height since container now has fixed height */
+}
+
+.teams-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.teams-list-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.teams-list-container::-webkit-scrollbar-thumb {
+  background: #004d00;
+  border-radius: 4px;
+}
+
+.teams-list-container::-webkit-scrollbar-thumb:hover {
+  background: #006400;
+}
+
+/* Team List Items */
+.team-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+  transition: all 0.2s ease;
+}
+
+.team-list-item--clickable {
+  cursor: pointer;
+}
+
+.team-list-item--clickable:hover {
+  transform: translateX(4px);
+  border-color: #004d00;
+  box-shadow: 0 2px 8px rgba(0, 77, 0, 0.15);
+  background-color: #f8fff8;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.team-name {
+  font-family: inherit;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.team-click-hint {
+  font-size: 0.75rem;
+  color: #666;
+  font-style: italic;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.team-list-item--clickable:hover .team-click-hint {
+  opacity: 1;
+  color: #004d00;
+}
+
+/* Team Actions Container */
+.team-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.league-contact-button {
+  background-color: #004d00;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  z-index: 1;
+  position: relative;
+}
+
+.league-contact-button:hover {
+  background-color: #006400;
+}
+
+/* Right Container - Registration and Login Forms */
+.right-side-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.signup-box, .team-login-box {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-login-box {
+  border: 2px solid #004d00;
+}
+
+.team-login-box h2 {
+  color: #004d00;
+  border-bottom: 2px solid #004d00;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-login-box .message {
+  margin-top: 1rem;
+}
+.registration-box,
+.signup-box {
+  width: 100%;
+  box-sizing: border-box;
+  min-width: 0; /* Allow flex items to shrink below content size */
+}
+
+.signup-box h2 {
+  color: #004d00;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #004d00;
+  margin-top: 0;
+}
+
+/* League FAQ section - responsive positioning */
+.league-faq-section-responsive {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 2rem; /* Increased padding */
+  text-align: center;
+  margin-top: 2rem;
+  grid-column: 1 / -1; /* Span full width on desktop */
+  order: 3;
+  max-width: 600px; /* Limit max width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-text {
+  color: #495057;
+  margin: 0 0 1rem 0; /* Increased bottom margin */
+  font-size: 1.1rem; /* Slightly larger text */
+  font-weight: 500;
+}
+
+.faq-link-button {
+  display: inline-block;
+  background-color: #004d00;
+  color: white;
+  padding: 0.8rem 2rem; /* Increased padding */
+  border-radius: 6px; /* Slightly larger border radius */
+  text-decoration: none;
+  font-size: 1rem; /* Slightly larger font */
+  font-weight: 600;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-link-button:hover {
+  background-color: #006400;
+  color: white;
+  text-decoration: none;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.league-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.league-form-group label {
+  color: #444;
+  font-weight: 500;
+}
+
+.league-form-group input,
+.league-form-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.league-form-group input:focus,
+.league-form-group select:focus {
+  outline: none;
+  border-color: #004d00;
+  box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+}
+
+/* Checkbox Group */
+.league-form-group.checkbox-group {
+  display: grid;
+  grid-template-columns: auto min-content;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox-label-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.checkbox-label-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-label-container span {
+  font-size: 0.95rem;
+  color: #444;
+  white-space: normal; /* Allow text to wrap */
+  line-height: 1.4; /* Add some line height for readability */
+}
+
+/* Base info icon container */
+.info-icon-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  justify-self: start;
+}
+
+/* Specific styling for signup form info icons */
+.signup-box .info-icon-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  justify-self: start;
+}
+
+/* Specific styling for captain login info icons */
+.captain-login-section .info-icon-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Base info icon styling */
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #004d00;
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  cursor: help;
+  font-weight: bold;
+}
+
+/* Specific info icon styling for signup form */
+.signup-box .info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #004d00;
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  cursor: help;
+  font-weight: bold;
+}
+
+/* Specific info icon styling for captain login */
+.captain-login-section .info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #004d00;
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  cursor: help;
+  font-weight: bold;
+}
+
+/* Remove base tooltip styling to prevent conflicts */
+
+/* Remove duplicate tooltip styles - using team-section-tooltip instead */
+
+/* Old tooltip styles removed - using team-section-tooltip instead */
+
+/* Players Section */
+.players-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.player-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.player-input-with-remove {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.player-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.add-player-button {
+  background: none;
+  border: 2px dashed #004d00;
+  color: #004d00;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.add-player-button:hover {
+  background-color: #004d00;
+  color: white;
+}
+
+.remove-player-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.league-submit-button {
+  background-color: #004d00;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: center;
+}
+
+.league-submit-button:hover {
+  background-color: #006400;
+}
+
+/* Messages */
+.message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 300px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.message.success {
+  background-color: #f0fff4;
+  color: #006400;
+  border: 1px solid #68d391;
+}
+
+.message.error {
+  background-color: #fff5f5;
+  color: #dc3545;
+  border: 1px solid #feb2b2;
+}
+
+.message.fade-out {
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .registration-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .left-container {
+    order: 1;
+  }
+
+  .signup-box {
+    order: 2;
+  }
+
+  .league-faq-section-responsive {
+    order: 3;
+    grid-column: auto; /* Reset on mobile */
+    max-width: none; /* Remove max-width constraint on mobile */
+    margin: 1rem 0 0 0; /* Reset margins on mobile */
+    padding: 1rem; /* Smaller padding on mobile */
+  }
+
+  .faq-text {
+    font-size: 0.95rem; /* Smaller on mobile */
+  }
+
+  .faq-link-button {
+    padding: 0.6rem 1.2rem; /* Smaller padding on mobile */
+    font-size: 0.9rem; /* Smaller font on mobile */
+  }
+
+  /* Reset fixed height on mobile for better content flow */
+  .registration-box {
+    height: auto;
+  }
+
+  .teams-list-container {
+    max-height: 300px; /* Restore max-height on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .league-registration {
+    padding: 1rem;
+  }
+
+  .league-header h1 {
+    font-size: 2rem;
+  }
+
+  .league-header p {
+    font-size: 1rem;
+  }
+
+  /* Mobile layout ordering - individual components */
+  .registration-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .captain-login-section {
+    order: 1; /* Captain login first */
+  }
+
+  .night-filter-section {
+    order: 2; /* Night filter second */
+  }
+
+  .left-container .registration-box:nth-child(2) {
+    order: 3; /* Reserved teams third */
+  }
+
+  .left-container .registration-box:nth-child(3) {
+    order: 4; /* Tentative teams fourth */
+  }
+
+  .signup-box {
+    order: 5; /* Registration form fifth */
+  }
+
+  .league-faq-section-responsive {
+    order: 6; /* FAQ last */
+  }
+
+  .night-filter-section {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .login-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .login-input {
+    min-width: auto;
+  }
+
+  .login-button,
+  .league-login-button {
+    width: 80%;
+    padding: 0.75rem;
+  }
+
+  .reset-buttons {
+    flex-direction: column;
+  }
+
+  .send-reset-button,
+  .back-to-login-button {
+    width: 100%;
+  }
+
+  .registration-box,
+  .signup-box {
+    padding: 1.5rem;
+  }
+
+  .league-form-group input,
+  .league-form-group select {
+    min-width: auto;
+  }
+
+  .checkbox-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-header-with-info {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .section-header-with-info h2 {
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile team list item spacing fixes */
+  .team-list-item {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+  
+  .team-info {
+    flex: 1;
+    min-width: 0; /* Allow text to wrap properly */
+  }
+  
+  .team-actions {
+    flex-shrink: 0;
+    min-width: auto;
+  }
+  
+  .team-name {
+    font-size: 0.9rem;
+    line-height: 1.3;
+  }
+  
+  .team-click-hint {
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+  }
+  
+  .league-contact-button {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.8rem;
+    min-width: 70px;
+    top: -7px;
+  }
+  
+  /* Mobile tooltip improvements with edge detection */
+  .team-section-tooltip {
+    width: auto !important;
+    min-width: 280px !important;
+    max-width: calc(100vw - 24px) !important;
+    font-size: 0.85rem !important;
+    left: 12px !important;
+    right: 12px !important;
+    transform: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0.8rem 1rem !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+  }
+
+  .team-section-tooltip::after {
+    left: calc(50% - 12px) !important;
+    transform: translateX(-50%) !important;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .team-section-tooltip {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.8rem !important;
+    min-width: 240px !important;
+    max-width: calc(100vw - 20px) !important;
+    left: 10px !important;
+    right: 10px !important;
+    transform: none !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    width: auto !important;
+  }
+
+  .team-section-tooltip::after {
+    left: calc(50% - 10px) !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* Ensure info icons are easily tappable on small screens */
+  .info-icon {
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 13px !important;
+    margin: 2px !important;
+  }
+
+  /* Better spacing for mobile */
+  .section-header-with-info {
+    gap: 0.75rem !important;
+  }
+
+  .captain-header-with-info {
+    gap: 0.75rem !important;
+  }
+
+  .checkbox-group .info-icon-container {
+    margin-top: 0.25rem !important;
+  }
+}
+
+/* Additional mobile ordering fix */
+@media (max-width: 768px) {
+  .right-side-container,
+  .left-container {
+    display: contents; /* Make containers transparent for ordering */
+  }
+
+  /* Enhanced tooltip positioning for mobile */
+  .info-icon-container {
+    position: static !important;
+  }
+
+  .team-section-tooltip {
+    position: fixed !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    bottom: 20px !important;
+    top: auto !important;
+    z-index: 10000 !important;
+    width: calc(100vw - 30px) !important;
+    max-width: 350px !important;
+    min-width: 280px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Remove the arrow pointer on mobile for better positioning */
+  .team-section-tooltip::after {
+    display: none !important;
+  }
+
+  /* Ensure the tooltip is centered */
+  .info-icon-container:hover .team-section-tooltip {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,633 @@
+/* LeagueManagement.css */
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab-button:hover {
+  color: #004d00;
+  background-color: #f8f9fa;
+}
+
+.tab-button.active {
+  color: #004d00;
+  border-bottom-color: #004d00;
+  font-weight: 600;
+}
+
+/* Tab Content */
+.tab-content {
+  margin-top: 20px;
+}
+
+/* Remove old horizontal layout since we're using tabs now */
+.league-management-container {
+  margin-top: 20px;
+}
+
+/* Header with stats */
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.content-header h2 {
+  font-size: 1.5rem;
+  color: rgb(47, 47, 47);
+  margin: 0;
+}
+
+.league-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-item {
+  background-color: #f8f9fa;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-label {
+  font-weight: 500;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #004d00;
+}
+
+/* Section headers */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.section-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Teams Section */
+.teams-section {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.night-filter {
+  padding: 0.5rem;
+  border: 1px solid #004d00;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  font-family: inherit;
+  font-size: 0.85rem;
+  min-width: 180px;
+  cursor: pointer;
+}
+
+.night-filter:focus {
+  outline: none;
+  border-color: #006400;
+}
+
+.teams-summary {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.teams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.team-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.team-content {
+  flex: 1;
+}
+
+.team-content h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.team-content p {
+  color: #666;
+  margin: 3px 0;
+  font-size: 0.85rem;
+}
+
+.team-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 15px;
+  min-width: 140px;
+}
+
+/* Players Section */
+.players-section {
+  background-color: #f0f8f0;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #c3e6cb;
+}
+
+.player-count-badge {
+  background-color: #28a745;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 12px 15px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.player-content {
+  flex: 1;
+}
+
+.player-content h4 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 6px;
+  margin-top: 0;
+}
+
+.player-content p {
+  color: #666;
+  margin: 2px 0;
+  font-size: 0.85rem;
+}
+
+.player-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 15px;
+}
+
+/* Buttons */
+.status-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.status-button.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-button.warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Default edit button styling */
+.status-button:not(.success):not(.warning) {
+  background-color: #007bff;
+  color: white;
+}
+
+.status-button:hover.success {
+  background-color: #218838;
+}
+
+.status-button:hover.warning {
+  background-color: #e0a800;
+}
+
+.status-button:hover:not(.success):not(.warning) {
+  background-color: #0056b3;
+}
+
+.unassigned-note {
+  color: #856404;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.assign-season-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.assign-season-select {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.assign-season-controls .status-button {
+  width: 160px;
+  box-sizing: border-box;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Alert messages */
+.alert {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* No data states */
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Scrollbar styling for lists */
+.teams-list::-webkit-scrollbar,
+.players-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.teams-list::-webkit-scrollbar-track,
+.players-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.teams-list::-webkit-scrollbar-thumb,
+.players-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.teams-list::-webkit-scrollbar-thumb:hover,
+.players-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Seasons Section */
+.seasons-section {
+  background-color: #f0f0f8;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #d0d0e0;
+}
+
+.seasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.season-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  border: 1px solid #d0d0e0;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.season-content {
+  flex: 1;
+  position: relative;
+}
+
+.season-content h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.season-content p {
+  color: #666;
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.season-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 20px;
+  min-width: 160px;
+}
+
+/* Status badges */
+.season-content .status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 8px;
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.season-content .status-badge.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.season-content .status-badge.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.season-content .status-badge.open {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+/* Create Season Modal */
+.create-season-modal {
+  max-width: 700px;
+  width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #004d00;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+.submit-button {
+  background-color: #004d00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #006400;
+}
+
+/* Modal overlay styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .teams-list,
+  .players-list,
+  .seasons-list {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .league-stats {
+    justify-content: center;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  
+  .filter-section {
+    width: 100%;
+  }
+  
+  .night-filter {
+    width: 100%;
+  }
+  
+  .team-item,
+  .player-item {
+    flex-direction: column;
+  }
+  
+  .team-actions,
+  .player-actions {
+    margin-left: 0;
+    margin-top: 15px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .status-button,
+  .delete-button {
+    flex: 1;
+    min-width: auto;
+  }
+  
+  .teams-list,
+  .players-list {
+    max-height: 300px;
+  }
+}

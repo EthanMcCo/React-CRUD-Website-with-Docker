@@ -1,0 +1,722 @@
+/* Page Layout */
+.team-finder-page {
+    min-height: 100vh;
+    background-color: #F7EEDF;
+    padding: 2rem 1rem;
+  }
+  
+  .team-finder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header Styles */
+  .team-finder-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+    border-bottom: 2px solid #004d00;
+  }
+  
+  .team-finder-header h1 {
+    color: #004d00;
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+  }
+  
+  .team-finder-header p {
+    color: #333;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  
+  /* Button Styles */
+  .create-profile-button {
+    background-color: #004d00;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .create-profile-button:hover,
+  .lookup-button:hover,
+  .team-login-button:hover {
+    background-color: #006400;
+  }
+
+  /* Forgot password functionality for TeamFinder */
+  .profile-login-footer {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .forgot-password-link {
+    background: none;
+    border: none;
+    color: #004d00;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    padding: 0;
+  }
+
+  .forgot-password-link:hover {
+    color: #006400;
+  }
+
+  .forgot-password-form {
+    width: 100%;
+  }
+
+  .forgot-password-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .forgot-password-text {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+  }
+
+
+
+  .reset-email-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+  }
+
+  .reset-email-input:focus {
+    outline: none;
+    border-color: #004d00;
+    box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+  }
+
+  .reset-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .send-reset-button,
+  .back-to-login-button {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+
+  .send-reset-button {
+    background-color: #004d00;
+    color: white;
+  }
+
+  .send-reset-button:hover {
+    background-color: #006400;
+  }
+
+  .back-to-login-button {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+
+  .back-to-login-button:hover {
+    background-color: #e9ecef;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+  }
+  
+  .close-button:hover {
+    color: #333;
+  }
+  
+  .lookup-button, .team-login-button {
+    background-color: #004d00;
+    color: white;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Layout Components */
+  .team-finder-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  .teamfinder__content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  
+  /* Players Section */
+  .players-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .teamfinder__players-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 2;
+    min-width: 0; /* Allows flex item to shrink below content size */
+    display: flex;
+    flex-direction: column;
+    max-height: 600px; /* Fixed height for scrolling */
+  }
+
+  .teamfinder__players-header {
+    flex-shrink: 0; /* Keep header visible */
+    margin-bottom: 1.5rem;
+  }
+
+  .teamfinder__players-header h2 {
+    margin: 0 0 1rem 0;
+    color: #004d00;
+    font-size: 1.5rem;
+  }
+
+  .teamfinder__active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .teamfinder__filter-tag {
+    background-color: #004d00;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .teamfinder__players-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .teamfinder__players-placeholder,
+  .teamfinder__error-message {
+    text-align: center;
+    padding: 3rem 0;
+    color: #666;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Custom scrollbar for players list */
+  .teamfinder__players-list::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .teamfinder__players-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  .teamfinder__players-list::-webkit-scrollbar-thumb {
+    background: #004d00;
+    border-radius: 4px;
+  }
+
+  .teamfinder__players-list::-webkit-scrollbar-thumb:hover {
+    background: #006400;
+  }
+  
+  .players-placeholder {
+    text-align: center;
+    padding: 3rem 0;
+    color: #666;
+  }
+  
+  .players-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Filter Styles */
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filter-card,
+  .profile-manager-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-card h3 {
+    color: #004d00;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .filter-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    justify-items: center;
+  }
+  
+  .filter-section {
+    text-align: center;
+    align-items: center;
+  }
+  
+  .filter-section h4 {
+    color: #444;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .nights-container,
+  .skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+  
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #444;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    min-width: 120px; 
+    justify-content: flex-start;
+  }
+  
+  .checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #004d00;
+    border-radius: 3px;
+  }
+  
+  .checkbox-label:hover {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+  }
+  
+  /* Profile Manager Card */
+  .profile-manager-card h3 {
+    color: #004d00;
+    margin-bottom: 1rem;
+  }
+
+  /* Team Manager Card */
+  .team-manager-card h3 {
+    color: #004d00;
+    margin-bottom: 1rem;
+  }
+
+  .team-manager-card p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  /* Form Styles */
+  .teamFinder-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .teamFinder-form-group label {
+    color: #555;
+    font-size: 0.9rem;
+  }
+  
+  .teamFinder-form-group input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  
+  /* Filter Tags */
+  .active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-tag {
+    background-color: #e8f5e9;
+    color: #004d00;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    border: 1px solid #004d00;
+  }
+  
+  /* Message Styles */
+  .message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .message.error {
+    background-color: #fff5f5;
+    color: #dc3545;
+    border: 1px solid #feb2b2;
+  }
+  
+  .message.success {
+    background-color: #f0fff4;
+    color: #006400;
+    border: 1px solid #68d391;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+
+    /* handling the order for mobile views */
+    .teamfinder__filter-card {
+      order: 2;
+    }
+    .teamfinder__players-section {
+      order: 2;
+    }
+    .teamfinder__info-section {
+      order: 1;
+    }
+    .teamfinder__profile-manager-card {
+      order: 1;
+    }
+    .team-finder-page {
+      padding: 1rem 0.5rem;
+    }
+
+    .team-finder-container {
+      padding: 0 0.5rem;
+      max-width: 100%;
+    }
+
+    .team-finder-content {
+      grid-template-columns: 1fr;
+    }
+
+    .teamfinder__content {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .teamfinder__players-section {
+      flex: none; /* Remove flex grow on mobile */
+      padding: 1.5rem;
+      max-height: 500px; /* Smaller height on mobile */
+      padding-left: 1rem;
+    }
+
+    .teamfinder__info-section {
+      flex: none; /* Remove flex grow on mobile */
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .teamfinder__filter-card,
+    .teamfinder__profile-manager-card {
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 1.5rem;
+    }
+  
+    .team-finder-header h1 {
+      font-size: 2rem;
+    }
+  
+    .filter-sections {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .teamfinder__filter-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .nights-container,
+    .skill-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .teamfinder__nights-container,
+    .teamfinder__skill-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+  
+    .checkbox-label {
+      min-width: 120px;
+    }
+
+    .teamfinder__checkbox-label {
+      min-width: 120px;
+    }
+
+    /* Ensure no horizontal overflow on mobile */
+    .teamfinder__filter-section {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .teamfinder__form-group input,
+    .teamfinder__form-group select {
+      width: 100%;
+      box-sizing: border-box;
+      max-width: 100%;
+    }
+  }
+
+  /* TeamFinder Specific Classes */
+  .teamfinder__info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+    min-width: 0; /* Allows flex item to shrink below content size */
+  }
+
+  .teamfinder__filter-card,
+  .teamfinder__profile-manager-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .teamfinder__filter-sections {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .teamfinder__filter-section {
+    text-align: center;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .teamfinder__filter-category {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .teamfinder__filter-category h4 {
+    color: #004d00;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #004d00;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .teamfinder__nights-container,
+  .teamfinder__skill-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .teamfinder__checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    text-align: left;
+  }
+
+  .teamfinder__checkbox-label:hover {
+    background-color: #f0f8f0;
+  }
+
+  .teamfinder__checkbox-label input {
+    margin: 0;
+  }
+
+  .teamfinder__form-group {
+    margin-bottom: 1rem;
+  }
+
+  .teamfinder__form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+  }
+
+  .teamfinder__form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+
+  .teamfinder__form-group input:focus {
+    outline: none;
+    border-color: #004d00;
+    box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+  }
+
+  .teamfinder__info-icon-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+
+  .teamfinder__info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #004d00;
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+    cursor: help;
+    font-weight: bold;
+  }
+
+  .teamfinder__tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    width: 250px;
+    white-space: normal;
+    text-align: center;
+    z-index: 1001;
+    opacity: 0;
+    transition: opacity 0.2s;
+    margin-bottom: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .teamfinder__info-icon-container:hover .teamfinder__tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .filter-category {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .filter-category h4 {
+    color: #004d00;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #004d00;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }

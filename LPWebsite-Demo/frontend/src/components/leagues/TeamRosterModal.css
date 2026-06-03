@@ -1,0 +1,214 @@
+/* Team Roster Modal Styles */
+
+.roster-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.roster-modal__content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.roster-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #004d00 0%, #006600 100%);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.roster-modal__title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.roster-modal__close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  line-height: 1;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.roster-modal__close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.roster-modal__body {
+  padding: 24px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.roster-modal__loading {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.roster-modal__error {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c00;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.roster-modal__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.roster-modal__team-info {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #004d00;
+}
+
+.roster-modal__team-info p {
+  margin: 8px 0;
+  color: #333;
+  line-height: 1.5;
+}
+
+.roster-modal__team-info strong {
+  color: #004d00;
+  font-weight: 600;
+}
+
+.roster-modal__players-section {
+  background-color: white;
+}
+
+.roster-modal__players-title {
+  margin: 0 0 16px 0;
+  color: #004d00;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.roster-modal__no-players {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.roster-modal__players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.roster-modal__player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.roster-modal__player-item:hover {
+  background-color: #f0f0f0;
+}
+
+.roster-modal__player-name {
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+.roster-modal__player-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.roster-modal__availability {
+  background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.roster-modal__spots-available {
+  margin: 0;
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .roster-modal__overlay {
+    padding: 10px;
+  }
+  
+  .roster-modal__content {
+    max-height: 90vh;
+  }
+  
+  .roster-modal__header {
+    padding: 16px 20px 12px;
+  }
+  
+  .roster-modal__title {
+    font-size: 1.2rem;
+  }
+  
+  .roster-modal__body {
+    padding: 20px;
+  }
+  
+  .roster-modal__player-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .roster-modal__player-date {
+    font-size: 0.85rem;
+  }
+}

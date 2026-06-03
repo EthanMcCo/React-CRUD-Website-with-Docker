@@ -1,0 +1,106 @@
+.player-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+  }
+  
+  .player-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.75rem;
+  }
+  
+  .player-card h3.player-name {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+}
+  
+  .skill-badge {
+    background-color: #004d00;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .player-card-content {
+    margin-bottom: 1.25rem;
+  }
+  
+  .player-bio {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .player-availability {
+    margin-top: 1rem;
+  }
+  
+  .player-availability h4 {
+    color: #444;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .availability-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .availability-tag {
+    background-color: #e8f5e9;
+    color: #004d00;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    border: 1px solid rgba(0, 77, 0, 0.2);
+  }
+  
+  .contact-player-button {
+    width: 100%;
+    background-color: #004d00;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+  }
+  
+  .contact-player-button:hover {
+    background-color: #006400;
+  }
+  
+  /* Also add these classes to your TeamFinder.css */
+  .players-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .players-placeholder {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    text-align: center;
+    padding: 1rem;
+  }

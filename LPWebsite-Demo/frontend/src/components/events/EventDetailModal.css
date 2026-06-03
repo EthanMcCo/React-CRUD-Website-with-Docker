@@ -1,0 +1,255 @@
+/* EventDetailModal.css */
+
+/* Base modal styles - Tighter padding */
+.event-detail-modal-redesign {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.event-detail-modal-redesign .event-detail-content-redesign {
+  max-height: 75vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Section: Date and Tables side by side - More compact */
+.event-detail-modal-redesign .event-top-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e9ecef;
+  flex-shrink: 0;
+}
+
+.event-detail-modal-redesign .event-date-section,
+.event-detail-modal-redesign .event-tables-section {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make section titles inline with content on desktop */
+.event-detail-modal-redesign .event-date-section {
+  display: block;
+}
+
+.event-detail-modal-redesign .event-tables-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-detail-modal-redesign .event-tables-section h4 {
+  margin: 0;
+  color: #004d00;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.event-detail-modal-redesign .event-date-section h4 {
+  margin: 0 0 0.5rem 0;
+  color: #004d00;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.event-detail-modal-redesign .date-time-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.event-detail-modal-redesign .date-info {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.event-detail-modal-redesign .time-info {
+  font-size: 1rem;
+  color: #666;
+}
+
+.event-detail-modal-redesign .recurring-info {
+  margin-top: 0.5rem;
+}
+
+.event-detail-modal-redesign .recurring-badge {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #a5d6a7;
+}
+
+.event-detail-modal-redesign .tables-content {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+/* Description Section - More compact */
+.event-detail-modal-redesign .event-description-section {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.event-detail-modal-redesign .event-description-section h4 {
+  margin: 0 0 1rem 0;
+  color: #004d00;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.event-detail-modal-redesign .description-content {
+  padding: 1rem;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Large Image Section - Properly sized */
+.event-detail-modal-redesign .event-image-section-large {
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.event-detail-modal-redesign .event-image-section-large h4 {
+  margin: 0 0 0.75rem 0;
+  color: #004d00;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.event-detail-modal-redesign .image-container-large {
+  text-align: center;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.event-detail-modal-redesign .event-image-large {
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+  background-color: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .event-detail-modal-redesign {
+    width: 95vw;
+    max-width: 95vw;
+    height: auto;
+    max-height: 85vh;
+    padding: 1rem;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .event-detail-modal-redesign .event-detail-content-redesign {
+    height: auto;
+    max-height: none;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  /* Use specific modal selectors to avoid Contact.css conflicts */
+  .event-detail-modal-redesign .event-top-section,
+  .event-detail-modal-redesign .event-date-section,
+  .event-detail-modal-redesign .event-tables-section,
+  .event-detail-modal-redesign .event-description-section,
+  .event-detail-modal-redesign .event-image-section-large {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .event-detail-modal-redesign .event-top-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+  
+  .event-detail-modal-redesign .event-image-large {
+    max-height: 400px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .event-detail-modal-redesign .date-time-content {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  
+  .event-detail-modal-redesign .event-tables-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-detail-modal-redesign .event-detail-content-redesign {
+    padding: 0;
+  }
+  
+  .event-detail-modal-redesign .event-top-section {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .event-detail-modal-redesign .event-date-section,
+  .event-detail-modal-redesign .event-tables-section {
+    padding: 0.75rem;
+  }
+  
+  .event-detail-modal-redesign .event-image-large {
+    max-height: 320px;
+  }
+  
+  .event-detail-modal-redesign .description-content {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .event-detail-modal-redesign .date-time-content {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+  
+  .event-detail-modal-redesign .event-tables-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}

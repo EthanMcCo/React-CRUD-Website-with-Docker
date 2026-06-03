@@ -1,0 +1,181 @@
+.player-signup-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .player-signup-container h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .player-signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .pSignup-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .pSignup-form-group input[type="text"],
+  .pSignup-form-group input[type="email"],
+  .pSignup-form-group select,
+  .pSignup-form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .pSignup-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .nights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .night-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .night-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .submit-button {
+    background-color: #004d00;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: center;
+    margin-top: 1rem;
+  }
+  
+  .submit-button:hover {
+    background-color: #006400;
+  }
+  
+  .message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .message.success {
+    background-color: #f0fff4;
+    color: #006400;
+    border: 1px solid #68d391;
+  }
+  
+  .message.error {
+    background-color: #fff5f5;
+    color: #dc3545;
+    border: 1px solid #feb2b2;
+  }
+  
+  .message.fade-out {
+    opacity: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .player-signup-container {
+      padding: 1rem;
+    }
+  
+    .nights-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  .signup-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1;
+  }
+  
+  .close-button:hover {
+    color: #333;
+  }
+  
+  .player-signup-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .form-help-text {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.25rem;
+  }
+  
+  .pSignup-form-group input[type="password"] {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .pSignup-form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #004d00;
+    box-shadow: 0 0 0 2px rgba(0, 77, 0, 0.1);
+  }
+  
+  /* Style for password validation errors */
+  .form-group.error input[type="password"] {
+    border-color: #dc3545;
+  }
+  
+  .form-group.error .form-help-text {
+    color: #dc3545;
+  }
