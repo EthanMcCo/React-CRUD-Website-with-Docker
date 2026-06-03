@@ -1,8 +1,8 @@
  # 1. Create your local .env from the example                                                     
-  cp .env.example .env                                                                             
+  ``cp .env.example .env``                                                                             
                                                                                                    
 # 2. Build and start all containers                                                              
-  docker compose up --build                                                                        
+  ``docker compose up --build``                                                                        
                                                                                                    
   Once running:
   - Frontend → http://localhost:3000                                                               
